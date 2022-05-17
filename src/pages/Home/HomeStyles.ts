@@ -4,6 +4,9 @@ import styled from "styled-components";
 
 export const Home = styled.main`
 
+    width: 90%;
+    /* border: red solid 1px; */
+    margin: 0 auto;
     
 `
 
@@ -12,12 +15,33 @@ export const Header = styled.header`
     display: flex;
     padding-top: 55px;
     padding-left: 80px;
-    border: red 1px solid;
-
 
     img{
         height: 33px;;
     }
 
+`
+
+export const Search = styled.div`
+    /* border: red solid 1px; */
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    
+    #searchInput{
+        flex: 1;
+        margin-left: 1rem;
+        height: 2rem;
+        border: 3px solid transparent;
+        border-radius: .5rem;
+    }
+
+    #searchInput:focus{
+        outline: none;
+        box-shadow: 0 0 .8rem red;
+    }
 `
 
