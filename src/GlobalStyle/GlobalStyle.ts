@@ -1,4 +1,5 @@
 import {createGlobalStyle} from 'styled-components'
+import imgBg from '../assets/images/img-bg.png'
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -15,5 +16,8 @@ html{
 
 body{
     font-family: sans-serif;
-}
+    background-image: url(${imgBg});  
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 `
