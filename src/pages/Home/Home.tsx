@@ -1,11 +1,12 @@
 import  * as S  from "./HomeStyles"
 import headerImage from '../../assets/images/Header.png'
+import  CharacterInfo  from "../../components/CharacterInfo"
 
 export const Home = () => {
     return(
         <S.Home>
             <S.Header>
-                <img src={headerImage} alt="" />
+                <img src={headerImage} alt="Game of Thrones Logo | text: Quem é você em westeros" />
             </S.Header>
 
 
@@ -14,7 +15,9 @@ export const Home = () => {
                 <input type="text" name="searchInput" id="searchInput" placeholder="Search a character" role='searchInput'/>
             </S.Search>
 
-            Home hey
+
+            <CharacterInfo />
+
         </S.Home>
     )
 }

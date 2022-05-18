@@ -43,5 +43,6 @@ export const Search = styled.div`
         outline: none;
         box-shadow: 0 0 .8rem red;
     }
+    
 `
 
