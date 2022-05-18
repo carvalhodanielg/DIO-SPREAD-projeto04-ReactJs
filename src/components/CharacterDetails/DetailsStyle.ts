@@ -7,7 +7,7 @@ type justifyContent = {
 
 
 export const Wrapper = styled.div`
-    border: red 1px solid;
+    /* border: red 1px solid; */
     width: 50%;
     padding: 10px 40px;
     display: flex;
@@ -19,7 +19,9 @@ export const Wrapper = styled.div`
     }
 
 
-
+    &:first-child{
+        border-right: 1px solid #282828;
+    }
 
 
     & :first-child{
@@ -55,4 +57,10 @@ export const CharacterImage = styled.div`
 
 export const SecondaryInfo = styled.div`
     margin-bottom: 30px;    
+`
+
+export const HouseInfo = styled(SecondaryInfo)`
+    display: flex;
+    align-items: center;
+    background-color: #222222;
 `
