@@ -39,8 +39,8 @@ export const CharacterDetails = () => {
                     </S.SecondaryInfo>
 
                     <S.HouseInfo>
-                        <img height={60}  src={houseSelector('Lannyster').houseLogo} alt="house's heraldry" />
-                        <span>House {houseSelector('Lannyster').houseName}</span>
+                        <img height={60}  src={houseSelector('Lannister').houseLogo} alt="house's heraldry" />
+                        <span>House {houseSelector('Lannister').houseName}</span>
                     </S.HouseInfo>
                 </S.MainInfo>
                 

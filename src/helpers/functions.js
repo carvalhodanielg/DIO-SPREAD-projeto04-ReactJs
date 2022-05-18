@@ -7,7 +7,6 @@ export const houseSelector = (house) => {
 
     console.log(info[0].houseName);
     return info[0];
-
 }
 
 
