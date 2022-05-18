@@ -1,4 +1,12 @@
 import * as S from './DetailsStyle'
+import {houses} from '../../utils/houses'
+import {houseSelector} from '../../helpers/functions' 
+
+type Houses = {
+    houseName: string,
+    houseLogo: string
+}
+
 
 
 export const CharacterDetails = () => {
@@ -31,8 +39,8 @@ export const CharacterDetails = () => {
                     </S.SecondaryInfo>
 
                     <S.HouseInfo>
-                        <img height={80}  src="https://toppng.com/uploads/preview/house-lannister-main-shield-house-lannister-sigil-11563042066cimlrdab9o.png" alt="house's heraldry" />
-                        <span>House Lannister</span>
+                        <img height={60}  src={houseSelector('Lannyster').houseLogo} alt="house's heraldry" />
+                        <span>House {houseSelector('Lannyster').houseName}</span>
                     </S.HouseInfo>
                 </S.MainInfo>
                 

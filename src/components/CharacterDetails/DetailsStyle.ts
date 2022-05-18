@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import floralName from '../../assets/images/floralName.png'
 
+
+
 type justifyContent = {
     justifyContent: string
 }
@@ -63,4 +65,9 @@ export const HouseInfo = styled(SecondaryInfo)`
     display: flex;
     align-items: center;
     background-color: #222222;
+    img{
+        padding: 5px;
+        margin-left: 5px;
+        margin-right: 0px;
+    }
 `
