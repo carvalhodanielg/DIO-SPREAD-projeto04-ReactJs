@@ -9,10 +9,10 @@ type justifyContent = {
 
 
 export const Wrapper = styled.div`
-    /* border: red 1px solid; */
     width: 50%;
     padding: 10px 40px;
     display: flex;
+
     
 
     h1{

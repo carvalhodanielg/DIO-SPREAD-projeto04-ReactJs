@@ -7,7 +7,7 @@ export const CharacterInfo = () => {
             <CharacterDetails />
 
             <div>
-
+                   
             </div>
         </S.CharacterStyle>
       )

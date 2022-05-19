@@ -6,7 +6,7 @@ export const Home = () => {
     return(
         <S.Home>
             <S.Header>
-                <img src={headerImage} alt="Game of Thrones Logo | text: Quem é você em westeros" />
+                <img role='mainLogo'src={headerImage} alt="Game of Thrones Logo | text: Quem é você em westeros" />
             </S.Header>
 
 
