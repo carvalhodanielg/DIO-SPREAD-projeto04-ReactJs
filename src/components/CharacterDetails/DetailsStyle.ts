@@ -7,12 +7,15 @@ type justifyContent = {
     justifyContent: string
 }
 
+type flexDirection = {
+    flexDirection: string
+}
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<flexDirection>`
     width: 50%;
     padding: 10px 40px;
     display: flex;
-
+    flex-direction: ${props => props.flexDirection};
     
 
     h1{
@@ -69,5 +72,54 @@ export const HouseInfo = styled(SecondaryInfo)`
         padding: 5px;
         margin-left: 5px;
         margin-right: 0px;
+    }
+`
+
+
+export const Familycard = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 400px;
+    /* height: 60px; */
+
+    padding: 10px 30px;
+    margin: 10px 0px 0px 0px;
+    align-self: center;
+    background-color: #222222; 
+
+
+    .familyCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img{
+            height: 60px;
+            width: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+
+
+
+
+`
+
+export const Container = styled.div`
+    height: 400px;
+    overflow-y: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+
+
+    &::-webkit-scrollbar {
+     width: 10px
+    } 
+   
+    &::-webkit-scrollbar-thumb {   
+    background-color: darkgrey;   
     }
 `

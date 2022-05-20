@@ -2,9 +2,8 @@ import * as S from './DetailsStyle'
 import {houses} from '../../utils/houses'
 import {houseSelector} from '../../helpers/functions' 
 import { useEffect, useState } from 'react'
-import apiChar from '../../services/api'
-import { Console } from 'console'
-
+import API from '../../services/api'
+import FamilyCard from '../FamilyCard'
 
 type Houses = {
     houseName: string,
@@ -20,42 +19,35 @@ type Characters = {
     family: string,
     image: string,
     imageUrl: string
-    // name: string,
-    // slug: string,
-    // house: {
-    //     slug: string,
-    //     name: string
-    // },
-    // quotes: string[]
 }
 
 export const CharacterDetails = () => {
 
-const [char, setChar] = useState<Characters[]>();
-const [filtered, setFiltered] = useState<Characters[]>();
+    const [char, setChar] = useState<Characters[]>([]);
+    const [filtered, setFiltered] = useState<Characters[]>([]);
 
-const family = (house: string) => {
-    setFiltered(char?.filter(element => element.lastName.includes(house)));
-    console.log(filtered);
-    
-}
 
-useEffect(()=>{
-    
+    useEffect(()=>{
+        loadChar();
 
-    apiChar
-            .get("/characters")
-            .then((response: any) => setChar(response.data))
-            .then(() => family('Lannister'))
-            .catch((err: Error)=> console.log("ihh rapaz..."+err));
+    },[filtered])
 
-},[])
 
+    const loadChar = async () => {
+        let json = await API.char();
+        setChar(json)
+        family();
+
+    }
+
+    const family = () => {
+        setFiltered(char.filter(element => element.lastName.includes('La'))); 
+    }
 
 
        return(
         <>
-            <S.Wrapper>
+            <S.Wrapper  flexDirection={'row'}>
                 <S.MainInfo justifyContent="space-between">
                     <h1>Character's details</h1>
 
@@ -87,15 +79,21 @@ useEffect(()=>{
                 </S.MainInfo>
                 
             </S.Wrapper>
-            <S.Wrapper>
+            <S.Wrapper  flexDirection={'column'}>
                 <>
-                    <h1>Character's details</h1>
+                    <h1>Character's family</h1>
+                <S.Container>
+
+
+                
                     {char !== undefined && filtered !== undefined &&
-                    filtered.map((element)=>(
-                        <p>{`${element.firstName} `}</p>
-                    ))
                     
+                    filtered.map((element, index)=>(
+                            
+                            <FamilyCard key={index} element={element}/>
+                    ))
                     }
+                </S.Container>
                 </>
                  
             </S.Wrapper>
