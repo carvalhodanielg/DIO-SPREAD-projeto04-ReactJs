@@ -1,9 +1,11 @@
 import * as S from './DetailsStyle'
 import {houses} from '../../utils/houses'
 import {houseSelector} from '../../helpers/functions' 
-import { useEffect, useState } from 'react'
-import API from '../../services/api'
+import React, { ButtonHTMLAttributes, ReactEventHandler, useEffect, useState } from 'react'
+// import API from '../../services/api'
 import FamilyCard from '../FamilyCard'
+import {randomChar} from '../../helpers/functions'
+import {apiChar} from '../../services/api'
 
 type Houses = {
     houseName: string,
@@ -21,38 +23,61 @@ type Characters = {
     imageUrl: string
 }
 
+
 export const CharacterDetails = () => {
 
     const [char, setChar] = useState<Characters[]>([]);
     const [filtered, setFiltered] = useState<Characters[]>([]);
+    const [quote, setQuote] = useState<string>();
+    const [selectedChar, setSelectedChar] = useState<Characters>();
+    const [charName, setCharName] = useState<string>('tyrion');
+    const [loadin, setLoading] = useState<boolean>(false);
 
+
+
+
+    const loadChar = async() => {
+        await apiChar.get('/characters')
+        .then((response)=>setChar(response.data))
+        .catch((err)=> console.error('errrouuu!' + err));
+        
+    }
+
+    
 
     useEffect(()=>{
         loadChar();
+       
+    },[])
 
-    },[filtered])
-
-
-    const loadChar = async () => {
-        let json = await API.char();
-        setChar(json)
-        family();
+    const family = (person: string) => {
+        let result = char.filter(element => element.lastName.includes(person));
+        setFiltered(result); 
+        
+        console.log('family')
 
     }
 
-    const family = () => {
-        setFiltered(char.filter(element => element.lastName.includes('La'))); 
-    }
+        const handleClick = async() => {
+            let randNumber = randomChar(char)
+            setSelectedChar(char[randNumber])
+            console.log(selectedChar)
 
+            if(selectedChar !== undefined){
+            console.log(selectedChar.lastName)
+            family(selectedChar.lastName)
+            }
+
+        }
 
        return(
         <>
             <S.Wrapper  flexDirection={'row'}>
                 <S.MainInfo justifyContent="space-between">
-                    <h1>Character's details</h1>
-
-                    <S.CharacterName>
-                        <h2 role='charName'>Cercei Lannister</h2>
+                    <h1>Character's details</h1> 
+                    <button onClick={handleClick}>press</button>
+                    <S.CharacterName>               
+                        <h2 role='charName'>{selectedChar?.fullName}</h2>                                
                     </S.CharacterName>
 
                     <S.CharacterImage>
@@ -69,7 +94,9 @@ export const CharacterDetails = () => {
                     
                     <S.SecondaryInfo>
                         <h4>Quote</h4>
-                        <blockquote role='charQuote'>Tears aren't a woman's only weapon. The best one's between your legs.</blockquote>
+                        {quote !== undefined &&
+                            <blockquote role='charQuote'>{quote}</blockquote>
+                        }
                     </S.SecondaryInfo>
 
                     <S.HouseInfo>
@@ -83,14 +110,12 @@ export const CharacterDetails = () => {
                 <>
                     <h1>Character's family</h1>
                 <S.Container>
-
-
                 
-                    {char !== undefined && filtered !== undefined &&
+                    {char !== undefined &&
                     
                     filtered.map((element, index)=>(
-                            
-                            <FamilyCard key={index} element={element}/>
+                                 
+                        <FamilyCard key={index} element={element}/>     
                     ))
                     }
                 </S.Container>

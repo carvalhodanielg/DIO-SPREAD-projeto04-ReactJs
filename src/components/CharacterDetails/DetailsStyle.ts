@@ -51,6 +51,7 @@ export const CharacterName = styled.div`
     display: flex;
     align-items: center;
     text-align: center;
+    align-self: center;
 `
 
 export const CharacterImage = styled.div`
