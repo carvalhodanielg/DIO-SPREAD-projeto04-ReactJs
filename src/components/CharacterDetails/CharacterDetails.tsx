@@ -33,22 +33,25 @@ export const CharacterDetails = () => {
     const [charName, setCharName] = useState<string>('tyrion');
     const [loadin, setLoading] = useState<boolean>(false);
 
+    let randNumber = randomChar(char)
 
-
-
-    const loadChar = async() => {
-        await apiChar.get('/characters')
+        apiChar.get('/characters')
         .then((response)=>setChar(response.data))
-        .catch((err)=> console.error('errrouuu!' + err));
-        
-    }
+        .catch((err)=> console.error('errrouuu!' + err));        
+    
 
     
 
     useEffect(()=>{
-        loadChar();
+
+        console.log(selectedChar)
+
+        if(selectedChar !== undefined){
+            family(selectedChar.lastName)
+        }
+        
        
-    },[])
+    },[selectedChar])
 
     const family = (person: string) => {
         let result = char.filter(element => element.lastName.includes(person));
@@ -59,15 +62,15 @@ export const CharacterDetails = () => {
     }
 
         const handleClick = async() => {
-            let randNumber = randomChar(char)
+
             setSelectedChar(char[randNumber])
+            console.log(char)
             console.log(selectedChar)
 
             if(selectedChar !== undefined){
             console.log(selectedChar.lastName)
             family(selectedChar.lastName)
             }
-
         }
 
        return(
