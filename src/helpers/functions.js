@@ -2,9 +2,14 @@ import { houses } from "../utils/houses"
 
 
 export const houseSelector = (house) => {
-
     let info = houses.filter(element => element.houseName === house);
 
+    if(info === undefined || info === null || info === []){
+        return {
+            houseName: " ",
+            houseLogo: ``
+        }
+    }
 
     return info[0];
 }
@@ -24,4 +29,5 @@ export const randomChar = (char) => {
     
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
+
 

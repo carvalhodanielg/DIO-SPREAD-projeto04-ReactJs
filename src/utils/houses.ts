@@ -42,6 +42,10 @@ export const houses = [
     houseName: "Tyrell",
     houseLogo: `${logo.tyrell}`
 },
+{
+    houseName: "",
+    houseLogo: ``
+},
 
 ]
 

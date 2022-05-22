@@ -55,8 +55,12 @@ export const CharacterName = styled.div`
 `
 
 export const CharacterImage = styled.div`
+    min-height: 300px;
+    display: flex;
+    align-items: center;
         img{
             border: 2px solid #fff;
+            max-width: 200px;
         }
     
 `

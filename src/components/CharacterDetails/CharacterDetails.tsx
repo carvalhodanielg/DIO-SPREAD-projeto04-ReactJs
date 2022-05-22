@@ -84,7 +84,7 @@ export const CharacterDetails = () => {
                     </S.CharacterName>
 
                     <S.CharacterImage>
-                        <img role='charImage' id='charImage' src="https://thronesapi.com/assets/images/cersei.jpg" alt="character image" />
+                        <img role='charImage' id='charImage' src={selectedChar?.imageUrl} alt="character image" />
                     </S.CharacterImage>
                     
                 </S.MainInfo>
@@ -92,7 +92,7 @@ export const CharacterDetails = () => {
                 <S.MainInfo justifyContent = 'flex-end'>
                     <S.SecondaryInfo>
                         <h4>Title</h4>
-                        <p role='charTitle'>Lady of Casterly Rock</p>
+                        <p role='charTitle'>{selectedChar?.title}</p>
                     </S.SecondaryInfo>
                     
                     <S.SecondaryInfo>
@@ -103,8 +103,14 @@ export const CharacterDetails = () => {
                     </S.SecondaryInfo>
 
                     <S.HouseInfo>
-                        <img  role='charLogo' height={60}  src={houseSelector('Lannister').houseLogo} alt="house's heraldry" />
-                        <span role='charHouse'>House {houseSelector('Lannister').houseName}</span>
+                        
+                            {selectedChar !== undefined &&
+                                <>
+                            <img  role='charLogo' height={60}  src={houseSelector('Lannister').houseLogo} alt="house's heraldry" />
+                            <span role='charHouse'>{selectedChar?.family}</span>
+                                </>
+                            }
+                        
                     </S.HouseInfo>
                 </S.MainInfo>
                 
