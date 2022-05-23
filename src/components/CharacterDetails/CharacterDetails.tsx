@@ -6,11 +6,7 @@ import React, { ButtonHTMLAttributes, ReactEventHandler, useEffect, useState } f
 import FamilyCard from '../FamilyCard'
 import {randomChar} from '../../helpers/functions'
 import {apiChar} from '../../services/api'
-
-type Houses = {
-    houseName: string,
-    houseLogo: string
-}
+import { firstChar } from '../../utils/firstChar'
 
 type Characters = {
     id: number,
@@ -28,37 +24,26 @@ export const CharacterDetails = () => {
 
     const [char, setChar] = useState<Characters[]>([]);
     const [filtered, setFiltered] = useState<Characters[]>([]);
-    const [quote, setQuote] = useState<string>();
-    const [selectedChar, setSelectedChar] = useState<Characters>();
-    const [charName, setCharName] = useState<string>('tyrion');
-    const [loadin, setLoading] = useState<boolean>(false);
-
+    const [selectedChar, setSelectedChar] = useState<Characters>(firstChar[0]);
+    const [loading, setLoading] = useState<boolean>(true)
     let randNumber = randomChar(char)
 
-        apiChar.get('/characters')
+    apiChar.get('/characters')
         .then((response)=>setChar(response.data))
+        .then(()=>setLoading(false))
         .catch((err)=> console.error('errrouuu!' + err));        
     
 
-    
-
     useEffect(()=>{
-
-        console.log(selectedChar)
-
         if(selectedChar !== undefined){
             family(selectedChar.lastName)
         }
-        
-       
     },[selectedChar])
+
 
     const family = (person: string) => {
         let result = char.filter(element => element.lastName.includes(person));
         setFiltered(result); 
-        
-        console.log('family')
-
     }
 
         const handleClick = async() => {
@@ -72,13 +57,13 @@ export const CharacterDetails = () => {
             family(selectedChar.lastName)
             }
         }
-
-       return(
-        <>
+       
+         return(
+        <>    
             <S.Wrapper  flexDirection={'row'}>
                 <S.MainInfo justifyContent="space-between">
                     <h1>Character's details</h1> 
-                    <button onClick={handleClick}>press</button>
+                    <button disabled={loading} onClick={handleClick}>{loading?'wait a sec...':'Select'}</button>
                     <S.CharacterName>               
                         <h2 role='charName'>{selectedChar?.fullName}</h2>                                
                     </S.CharacterName>

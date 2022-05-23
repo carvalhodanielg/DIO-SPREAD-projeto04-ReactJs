@@ -40,6 +40,17 @@ export const MainInfo = styled.div<justifyContent>`
     justify-content: ${props => props.justifyContent};
     text-align: left;
 
+        button{
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #E5E5E5;
+            height: 25px;
+        }
+
+        button:hover{
+            opacity: .9;
+        }
 
 `
 export const CharacterName = styled.div`

@@ -31,3 +31,7 @@ export const randomChar = (char) => {
 }
 
 
+export const initialChar = () => {
+    
+}
+

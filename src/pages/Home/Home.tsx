@@ -11,8 +11,9 @@ export const Home = () => {
 
 
             <S.Search>
-                <label htmlFor="searchInput">Search</label>
-                <input type="text" name="searchInput" id="searchInput" placeholder="Search a character" role='searchInput'/>
+                {/* <label htmlFor="searchInput">Search</label>
+                <input type="text" name="searchInput" id="searchInput" placeholder="Search a character" role='searchInput'/> */}
+                {/* <button>Search</button> */}
             </S.Search>
 
 
