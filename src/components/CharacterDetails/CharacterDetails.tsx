@@ -95,18 +95,18 @@ export const CharacterDetails = () => {
                         <p role='charTitle'>{selectedChar?.title}</p>
                     </S.SecondaryInfo>
                     
-                    <S.SecondaryInfo>
+                    {/* <S.SecondaryInfo>
                         <h4>Quote</h4>
                         {quote !== undefined &&
                             <blockquote role='charQuote'>{quote}</blockquote>
                         }
-                    </S.SecondaryInfo>
+                    </S.SecondaryInfo> */}
 
                     <S.HouseInfo>
                         
                             {selectedChar !== undefined &&
                                 <>
-                            <img  role='charLogo' height={60}  src={houseSelector('Lannister').houseLogo} alt="house's heraldry" />
+                            <img  role='charLogo' height={60}  src={houseSelector('*Free People').houseLogo} alt="house's heraldry" />
                             <span role='charHouse'>{selectedChar?.family}</span>
                                 </>
                             }

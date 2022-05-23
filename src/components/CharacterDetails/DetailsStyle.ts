@@ -73,6 +73,7 @@ export const HouseInfo = styled(SecondaryInfo)`
     display: flex;
     align-items: center;
     background-color: #222222;
+    width: 250px;
     img{
         padding: 5px;
         margin-left: 5px;
