@@ -68,3 +68,14 @@ export const Search = styled.div`
     
 `
 
+export const Footer = styled.footer`
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;   
+    padding-bottom: 15px; 
+
+`
+

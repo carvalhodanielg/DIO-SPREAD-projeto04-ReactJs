@@ -26,9 +26,9 @@ export const Home = () => {
 
         </S.Home>
     
-        <footer style={{height: '250px'}}>
-                developed by Daniel 2022.
-        </footer>
+        <S.Footer>
+                <a href="https://www.linkedin.com/in/carvalhodanielg/">Developed by Daniel Carvalho | 2022</a> 
+        </S.Footer>
 
         </>
     
