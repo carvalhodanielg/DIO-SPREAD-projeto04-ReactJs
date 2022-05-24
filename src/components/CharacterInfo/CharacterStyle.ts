@@ -7,4 +7,10 @@ export const CharacterStyle = styled.section`
     display: flex;
     background-color: #151515;
     flex-wrap: wrap;
+
+    @media(max-width: 1200px){
+        flex-direction: column;
+        align-items: center;
+    }
+    
 `

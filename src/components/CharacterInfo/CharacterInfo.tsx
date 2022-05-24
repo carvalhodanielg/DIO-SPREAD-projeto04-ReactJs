@@ -6,9 +6,6 @@ export const CharacterInfo = () => {
         <S.CharacterStyle>
             <CharacterDetails />
 
-            <div>
-                   
-            </div>
         </S.CharacterStyle>
       )
 }

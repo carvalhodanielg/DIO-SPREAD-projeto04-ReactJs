@@ -17,6 +17,10 @@ export const Wrapper = styled.div<flexDirection>`
     display: flex;
     flex-direction: ${props => props.flexDirection};
     
+    @media(max-width: 1200px){
+            flex-direction: column;
+            align-items: center;
+        }
 
     h1{
         font-size: 16px;
@@ -26,12 +30,25 @@ export const Wrapper = styled.div<flexDirection>`
 
     &:first-child{
         border-right: 1px solid #282828;
+        
+        @media(max-width: 1200px){
+            border-right: none;
+        }
+    
+    
     }
 
 
     & :first-child{
         margin-right: 20px;
+
+        @media(max-width: 1200px){
+            margin-right: 0;
+        }
     }
+
+
+
 `
 
 export const MainInfo = styled.div<justifyContent>`
