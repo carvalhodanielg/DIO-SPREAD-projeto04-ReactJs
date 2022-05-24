@@ -20,6 +20,8 @@ export const Wrapper = styled.div<flexDirection>`
     @media(max-width: 1200px){
             flex-direction: column;
             align-items: center;
+            width: 95%;
+            padding: 10px 5px;
         }
 
     h1{
@@ -114,7 +116,7 @@ export const Familycard = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 400px;
+    width: 100%;
     /* height: 60px; */
 
     padding: 10px 30px;
@@ -122,11 +124,20 @@ export const Familycard = styled.div`
     align-self: center;
     background-color: #222222; 
 
+    @media(max-width: 1200px){
+            width: 100%;
+            padding: 10px 10px
+        }
+
 
     .familyCard{
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @media(max-width: 1200px){
+            width: 95%;
+        }
 
         img{
             height: 60px;
@@ -135,11 +146,6 @@ export const Familycard = styled.div`
             border-radius: 50%;
         }
     }
-
-
-
-
-
 `
 
 export const Container = styled.div`
@@ -148,6 +154,9 @@ export const Container = styled.div`
     margin: 0 auto;
     margin-top: 10px;
 
+    @media(max-width: 1200px){
+            width: 100%;
+        }
 
     &::-webkit-scrollbar {
      width: 10px

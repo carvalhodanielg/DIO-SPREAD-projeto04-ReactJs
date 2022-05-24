@@ -16,9 +16,31 @@ export const Header = styled.header`
     padding-top: 55px;
     padding-left: 80px;
 
+    @media(max-width: 1200px){
+            padding: 30px 0;
+            margin: 0 auto;
+            align-items: center;
+            flex-direction: column;
+        }}
+
     img{
-        height: 33px;;
+        height: 33px;
+
+        &:nth-child(2){
+            display: none;
+                @media(max-width: 1200px){
+                display: inline-block;
+            }}
+
+        
     }
+
+    #HeaderImg{
+        @media(max-width: 1200px){
+            display: none;
+        }}
+
+ 
 
 `
 

@@ -1,12 +1,17 @@
 import  * as S  from "./HomeStyles"
 import headerImage from '../../assets/images/Header.png'
 import  CharacterInfo  from "../../components/CharacterInfo"
+import headerImageMobile from '../../assets/images/HeaderMobile.png'
 
 export const Home = () => {
     return(
+        <>
+        
+        
         <S.Home>
             <S.Header>
-                <img role='mainLogo'src={headerImage} alt="Game of Thrones Logo | text: Quem é você em westeros" />
+                <img id="HeaderImg"role='mainLogo'src={headerImage} alt="Game of Thrones Logo | text: Quem é você em westeros" />
+                <img role='HeaderImgMobile'src={headerImageMobile} alt="Game of Thrones Logo | text: Quem é você em westeros" />
             </S.Header>
 
 
@@ -20,5 +25,12 @@ export const Home = () => {
             <CharacterInfo />
 
         </S.Home>
+    
+        <footer style={{height: '250px'}}>
+                developed by Daniel 2022.
+        </footer>
+
+        </>
+    
     )
 }

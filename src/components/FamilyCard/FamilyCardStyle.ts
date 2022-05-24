@@ -10,6 +10,10 @@ export const Familycard = styled.div`
     align-self: center;
     background-color: #222222; 
 
+    @media(max-width: 1200px){
+            width: 95%;
+            padding: 10px 5px;
+        }
 
     .familyCard{
         display: flex;
