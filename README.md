@@ -35,7 +35,9 @@
 <!-- About the Project -->
 ## :star2: O projeto:
   
-  O projeto é parte do Bootcamp DIo - Spread Fullstack Developer. A proposta é a criação de uma aplicação em React utilizando os conceitos apresentados no curso. A aplicação consiste em uma aplicação que consume uma API pública. A aplicação apresenta personagens aleatórios da série Game of Thrones, juntamente com algumas informações dos mesmos. 
+  O projeto é parte do Bootcamp DIO - Spread Fullstack Developer. A proposta é a criação de uma aplicação em React utilizando os conceitos apresentados no curso. A aplicação consiste em uma aplicação que consume uma API pública. A aplicação apresenta personagens aleatórios da série Game of Thrones, juntamente com algumas informações dos mesmos. 
+  
+  No Bootcamp, a aplicação apresentada no desafio utilizava a API do GitHub, porém, para fixar melhor os conhecimentos, foi utilizada uma API diferente, juntamente com uma nova proposta de aplicação.
   
   Para o desenvolvimento foi utilizado React e TypeScript, juntamente com alguns testes feitos com React Testing Library.
   A aplicação apresenta responsividade para diversos tipos de tela, desde grandes telas para computadores até dispositivos móveis.
