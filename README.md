@@ -1,46 +1,119 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h1>Projeto 04 - Bootcamp DIO - Spread Fullstack Developer</h1>
+  
+  ## Lista dos desafios de projeto do Bootcamp:
 
-## Available Scripts
+[Projeto 02 - Instagram](https://github.com/carvalhodanielg/DIO-SPREAD-projeto02-Instagram) | 
+[Projeto 03 - Estacionamento](https://github.com/carvalhodanielg/DIO-SPREAD-projeto03-Estacionamento) |
+[Projeto 04 - Interface Componentizada em React](https://github.com/carvalhodanielg/DIO-SPREAD-projeto04-ReactJs) |
+[Projeto 05 - Undefined](https://github.com/carvalhodanielg/DIO-SPREAD-projeto03-Estacionamento) |
+  
+  
+  <h1>Sistem componentizado utilizando React, TypeScript, React Testing Libraby e consumo de API</h1>
+   
+  <p>
+    Bem vindos ao meu projeto!! 
+  </p>
+  
+  
+<!-- Badges -->
+<p>
 
-In the project directory, you can run:
+  <a href="">
+    <img src="https://img.shields.io/github/last-commit/Louis3797/awesome-readme-template" alt="last update" />
+  </a>
+  
+</p>
+   
+<h4>
+    <a href="http://got-chars.vercel.app/">Ver demonstração | Teste</a>
+</div>
 
-### `npm start`
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- About the Project -->
+## :star2: O projeto:
+  
+  O projeto é parte do Bootcamp DIo - Spread Fullstack Developer. A proposta é a criação de uma aplicação em React utilizando os conceitos apresentados no curso. A aplicação consiste em uma aplicação que consume uma API pública. A aplicação apresenta personagens aleatórios da série Game of Thrones, juntamente com algumas informações dos mesmos. 
+  
+  Para o desenvolvimento foi utilizado React e TypeScript, juntamente com alguns testes feitos com React Testing Library.
+  A aplicação apresenta responsividade para diversos tipos de tela, desde grandes telas para computadores até dispositivos móveis.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- Screenshots -->
+### :camera: Screenshots
 
-### `npm test`
+<div align="center"> 
+  <img src="https://user-images.githubusercontent.com/100332887/170540447-7cc75a87-0079-4061-aaa0-e9a69d25e5e8.png" alt="screenshot" />
+  
+  <img src="https://user-images.githubusercontent.com/100332887/170540488-99635125-23df-49c3-83b7-c9fc5ff2fdb7.png" alt="screenshot" />
+  
+  <img src="https://user-images.githubusercontent.com/100332887/170540531-8a6ad685-d3b8-49c5-9533-b511975c8491.png" alt="screenshot" />
+  
+  <img src="https://user-images.githubusercontent.com/100332887/170540616-c1a58c2a-20f1-4938-85f7-fa4253131a60.png" alt="screenshot" />
+  
+  <img src="https://user-images.githubusercontent.com/100332887/170540633-ce68208c-3a88-47e6-aeba-e6e65279b95a.png" alt="screenshot" />
+  
+  <img src="https://user-images.githubusercontent.com/100332887/170540675-be121f8e-f509-4655-aaf2-d9add53de700.png" alt="screenshot" />
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- TechStack -->
+### :space_invader: Tecnologias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <ul>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/javascript">JavaScript</a></li>
+    <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+    <li><a href="https://testing-library.com/docs/react-testing-library/intro/">React Testing Library</a></li>
+    
+  </ul>
+  
+<!-- API's used -->
+### :dart: API's
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  <ul>
+    <li><a href="https://thronesapi.com/swagger/index.html?urls.primaryName=Game%20of%20Thrones%20API%20v2">Thrones API </a></li>
+  </ul>
 
-### `npm run eject`
+ 
+<!-- Run Locally -->
+### :running: Run Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Running the project
+  
+Clone the project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  git clone https://github.com/carvalhodanielg/DIO-SPREAD-projeto04-ReactJs.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Go to the project directory
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+  cd my-project
+```
 
-## Learn More
+Install dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Start the server
+
+```bash
+  npm start
+```
+  
+<!-- Contact -->
+## :handshake: Contato
+
+Daniel Carvalho - [Linkedin](https://www.linkedin.com/in/carvalhodanielg/) - carvalhodanielg@gmail.com
+
+
+
+<!-- Acknowledgments -->
+## :gem: Acknowledgements
