@@ -1,7 +1,6 @@
 import {createGlobalStyle} from 'styled-components'
 import imgBg from '../assets/images/img-bg.png'
 
-
 export const GlobalStyle = createGlobalStyle`
 
 *{

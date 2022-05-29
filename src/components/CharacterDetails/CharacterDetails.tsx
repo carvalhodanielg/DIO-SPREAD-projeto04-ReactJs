@@ -2,7 +2,6 @@ import * as S from './DetailsStyle'
 import {houses} from '../../utils/houses'
 import {houseSelector} from '../../helpers/functions' 
 import React, { ButtonHTMLAttributes, ReactEventHandler, useEffect, useState } from 'react'
-// import API from '../../services/api'
 import FamilyCard from '../FamilyCard'
 import {randomChar} from '../../helpers/functions'
 import {apiChar} from '../../services/api'
@@ -33,13 +32,11 @@ export const CharacterDetails = () => {
         .then(()=>setLoading(false))
         .catch((err)=> console.error('errrouuu!' + err));        
     
-
     useEffect(()=>{
         if(selectedChar !== undefined){
             family(selectedChar.lastName)
         }
     },[selectedChar])
-
 
     const family = (person: string) => {
         let result = char.filter(element => element.lastName.includes(person));
@@ -47,7 +44,6 @@ export const CharacterDetails = () => {
     }
 
         const handleClick = async() => {
-
             setSelectedChar(char[randNumber])
             console.log(char)
             console.log(selectedChar)
@@ -79,13 +75,6 @@ export const CharacterDetails = () => {
                         <h4>Title</h4>
                         <p role='charTitle'>{selectedChar?.title}</p>
                     </S.SecondaryInfo>
-                    
-                    {/* <S.SecondaryInfo>
-                        <h4>Quote</h4>
-                        {quote !== undefined &&
-                            <blockquote role='charQuote'>{quote}</blockquote>
-                        }
-                    </S.SecondaryInfo> */}
 
                     <S.HouseInfo>
                         

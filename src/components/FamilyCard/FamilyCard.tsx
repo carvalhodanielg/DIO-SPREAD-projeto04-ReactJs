@@ -10,29 +10,20 @@ type Characters = {
     image: string,
     imageUrl: string
 }
-// : React.FC<Characters>
 
 export const FamilyCard = ({element}: {element: Characters})=>{
-
-
-
-
     return(
         <>
         <S.Familycard>
-                        <div className='familyCard'>
-                            <img src={element.imageUrl} alt="." />
-                        </div>
-                        <div className='familyCard'>
-                            <p>{element.fullName} </p>
-                            <p>{element.title}</p>
-                        </div>
+            <div className='familyCard'>
+                <img src={element.imageUrl} alt="." />
+            </div>
+            <div className='familyCard'>
+                <p>{element.fullName} </p>
+                <p>{element.title}</p>
+            </div>
         </S.Familycard>
-        
         </>
-
-
-
     )
 }                    
                     

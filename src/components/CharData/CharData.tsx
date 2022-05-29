@@ -17,7 +17,7 @@ export const CharData = ({selectedChar}: {selectedChar: Characters}) => {
     return(
         <>
                     <div>                  
-                                    <h2 role='charName'>{selectedChar?.fullName}</h2>                                
+                        <h2 role='charName'>{selectedChar?.fullName}</h2>                                
                     </div>
 
                     <div>
@@ -26,11 +26,3 @@ export const CharData = ({selectedChar}: {selectedChar: Characters}) => {
         </>
     )
 }
-
-{/* <S.CharacterName>                  
-<h2 role='charName'>{selectedChar?.fullName}</h2>                                
-</S.CharacterName>
-
-<S.CharacterImage>
-<img role='charImage' id='charImage' src="https://thronesapi.com/assets/images/cersei.jpg" alt="character image" />
-</S.CharacterImage> */}

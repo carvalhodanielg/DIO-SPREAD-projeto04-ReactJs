@@ -1,13 +1,8 @@
 import styled from "styled-components";
 
-
-
 export const Home = styled.main`
-
     width: 90%;
-    /* border: red solid 1px; */
     margin: 0 auto;
-    
 `
 
 export const Header = styled.header`
@@ -31,8 +26,6 @@ export const Header = styled.header`
                 @media(max-width: 1200px){
                 display: inline-block;
             }}
-
-        
     }
 
     #HeaderImg{
@@ -45,7 +38,6 @@ export const Header = styled.header`
 `
 
 export const Search = styled.div`
-    /* border: red solid 1px; */
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -65,7 +57,6 @@ export const Search = styled.div`
         outline: none;
         box-shadow: 0 0 .8rem red;
     }
-    
 `
 
 export const Footer = styled.footer`
@@ -76,6 +67,5 @@ export const Footer = styled.footer`
     justify-content: center;
     align-items: flex-end;   
     padding-bottom: 15px; 
-
 `
 

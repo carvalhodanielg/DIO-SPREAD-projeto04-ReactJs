@@ -9,12 +9,6 @@ test('show show an image logo', ()=>{
 })
 
 
-test('Page must have a Search Input', ()=>{
-    render(<Home />)
-    const searchInput = screen.getByRole('searchInput');
-})
-
-
 test('Page must have a all char Name', ()=>{
     render(<Home />)
     const charName= screen.getByRole('charName');
@@ -31,10 +25,6 @@ test('Page must have a all char Image', ()=>{
     const charImage= screen.getByRole('charImage');
 })
 
-test('Page must have a all char Quote', ()=>{
-    render(<Home />)
-    const charQuote= screen.getByRole('charQuote');
-})
 
 test('Page must have a all char Logo', ()=>{
     render(<Home />)

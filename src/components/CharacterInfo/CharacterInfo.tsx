@@ -5,7 +5,6 @@ export const CharacterInfo = () => {
     return(
         <S.CharacterStyle>
             <CharacterDetails />
-
         </S.CharacterStyle>
       )
 }
